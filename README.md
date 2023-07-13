@@ -39,8 +39,8 @@ _NOTE: It's recommended to use MRJob for completing the MapReduce taks above._
 **Task 5.** Use Sqoop export command to export the results of each MapReduce tasks above to your RDS instance. Use the RDS connection string connection to visualise the dataset using a dashboarding tool (Google Data Studio, Tableau or PowerBI)  
 
 ## Assests  
-1. **RDS.pdf:** A document containing the codes, with the explanations, used for loading the datasets mentioned into an AWS RDS instance. This should have the code along with the screenshots of the EMR instance showing the table creation.  
-2. **Ingestiontask.pdf:** A document containing the code to create the HBase table. The file should also include the Sqoop command to ingest data from RDS into the HBase table. The document should be well commented explaining the code.  
-3. **batch_ingest.py** used to ingest the batch data to the HBase table.  
-4. The **Python codes** used for the MapReduce tasks. Answers to the query and the screenshots of the results of the MapReduce tasks must be included in a separate document (MapReducetasks.pdf) in sequence.
+1. [RDS.pdf](https://github.com/shinde-chandrakant/BigData-Ops-on-TLC-Yellow-Taxi/blob/master/src/Task1/RDS.pdf): A document containing the codes, with the explanations, used for loading the datasets mentioned into an AWS RDS instance. This should have the code along with the screenshots of the EMR instance showing the table creation.  
+2. [Ingestiontask.pdf](https://github.com/shinde-chandrakant/BigData-Ops-on-TLC-Yellow-Taxi/blob/master/src/Task2/Ingestiontask.pdf): A document containing the code to create the HBase table. The file should also include the Sqoop command to ingest data from RDS into the HBase table. The document should be well commented explaining the code.  
+3. [batch_ingest.py](https://github.com/shinde-chandrakant/BigData-Ops-on-TLC-Yellow-Taxi/blob/master/src/Task3/batch_ingest.py) used to ingest the batch data to the HBase table.  
+4. The [Python codes](https://github.com/shinde-chandrakant/BigData-Ops-on-TLC-Yellow-Taxi/tree/master/src/Task4) used for the MapReduce tasks. Answers to the query and the screenshots of the results of the MapReduce tasks must be included in a separate document (MapReducetasks.pdf) in sequence.
 
