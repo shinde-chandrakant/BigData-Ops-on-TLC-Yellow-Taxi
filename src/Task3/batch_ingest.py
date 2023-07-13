@@ -37,8 +37,5 @@ def batch_insert_data(filename, tablename):
     close_connection()    
 
 
-
-
-#Note: first create a file with name events and insert input data in it
 batch_insert_data('yellow_tripdata_2017-03.csv', 'trip_log')
 batch_insert_data('yellow_tripdata_2017-04.csv', 'trip_log')
