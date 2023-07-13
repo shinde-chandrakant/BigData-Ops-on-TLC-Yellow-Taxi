@@ -1,0 +1,16 @@
+### Data Ingestion Tasks
+
+Has been able to list the imported data inside HDFS
+The data has been ingested to RDS using the correct command
+Has imported data from Amazon RDS to HBase using Sqoop
+Has created the appropriate input schema for using HBase
+Has performed batch import of the datasets to HBase
+
+### Analytics Queries using MapReduce
+
+Has been able to correctly write a solution for solving the first analytical query
+Has been able to correctly write a solution for solving the second analytical query
+Has been able to correctly write a solution for solving the third analytical query
+Has been able to correctly write a solution for solving the fourth analytical query
+Has been able to correctly write a solution for solving the fifth analytical query.
+Has been able to correctly write a solution for solving the sixth analytical query.

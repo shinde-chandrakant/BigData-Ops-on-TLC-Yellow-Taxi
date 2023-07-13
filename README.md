@@ -19,7 +19,9 @@ The **Big Data** tools used - Hadoop Framework, Apache HBase and Apache Sqoop. U
 
 ### Data Ingestion Tasks:  
 **Task 1.** [Create an RDS instance](https://cdn.upgrad.com/uploads/production/08f82196-b083-426a-ab25-1eb052c43683/Documentation%2B-%2BWorking%2Bwith%2BRDS.pdf) in your AWS account and upload the data from two files (yellow_tripdata_2017-01.csv & yellow_tripdata_2017-02.csv) from the dataset. Make sure to create an appropriate schema for the data sets before uploading them to RDS.  
+
 **Task 2.** Use Sqoop command to ingest the data from RDS into the HBase Table.  
+
 **Task 3.** Bulk import data from next two files in the dataset on your EMR cluster to your HBase Table using the relevant codes.
 _Note: For the above task 3, you just need to import data from the subsequent 2 csv files_
 
@@ -37,8 +39,8 @@ _NOTE: It's recommended to use MRJob for completing the MapReduce taks above._
 **Task 5.** Use Sqoop export command to export the results of each MapReduce tasks above to your RDS instance. Use the RDS connection string connection to visualise the dataset using a dashboarding tool (Google Data Studio, Tableau or PowerBI)  
 
 ## Assests  
-**RDS.pdf:** A document containing the codes, with the explanations, used for loading the datasets mentioned into an AWS RDS instance. This should have the code along with the screenshots of the EMR instance showing the table creation.  
-**Ingestiontask.pdf:** A document containing the code to create the HBase table. The file should also include the Sqoop command to ingest data from RDS into the HBase table. The document should be well commented explaining the code.  
-**batch_ingest.py** used to ingest the batch data to the HBase table.
-The **Python codes** used for the MapReduce tasks. Answers to the query and the screenshots of the results of the MapReduce tasks must be included in a separate document (MapReducetasks.pdf) in sequence.
+1. **RDS.pdf:** A document containing the codes, with the explanations, used for loading the datasets mentioned into an AWS RDS instance. This should have the code along with the screenshots of the EMR instance showing the table creation.  
+2. **Ingestiontask.pdf:** A document containing the code to create the HBase table. The file should also include the Sqoop command to ingest data from RDS into the HBase table. The document should be well commented explaining the code.  
+3. **batch_ingest.py** used to ingest the batch data to the HBase table.  
+4. The **Python codes** used for the MapReduce tasks. Answers to the query and the screenshots of the results of the MapReduce tasks must be included in a separate document (MapReducetasks.pdf) in sequence.
 
