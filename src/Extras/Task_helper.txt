@@ -1,0 +1,79 @@
+mysql -h mydbinstance.cxueuenwsllg.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+
+==================================================================
+syntaxt for file transfer from windows to remote linux:
+pscp -P <port> -i <private id key> <source file> <username@ip:/path/to/>
+
+example 1:
+pscp -P 22 -i "D:\Study\UPGRAD EPGDS\DE\AWS Academy\Demo1.ppk" Task_helper.txt hadoop@ec2-3-81-233-13.compute-1.amazonaws.com:/home/hadoop/
+
+example 2:
+pscp -P 22 -i "D:\Study\UPGRAD EPGDS\DE\AWS Academy\Demo1.ppk" hadoop@ec2-3-81-233-13.compute-1.amazonaws.com:/home/hadoop/out.txt ./
+==================================================================
+
+CREATE TABLE trip_log 
+(
+VendorID INT,
+tpep_pickup_datetime VARCHAR(50),
+tpep_dropoff_datetime VARCHAR(50),
+Passenger_count INT,
+Trip_distance FLOAT,
+RatecodeID INT,
+store_and_fwd_flag VARCHAR(2),
+PULocationID INT,
+DOLocationID INT,
+payment_type INT,
+fare_amount FLOAT,
+extra FLOAT,
+mta_tax FLOAT,
+tip_amount FLOAT,
+tolls_amount FLOAT,
+improvement_surcharge FLOAT,
+total_amount FLOAT,
+Airport_fee FLOAT
+);
+
+wget https://nyc-tlc-upgrad.s3.amazonaws.com/yellow_tripdata_2017-01.csv
+
+LOAD DATA LOCAL INFILE '/home/hadoop/yellow_tripdata_2017-02.csv'
+INTO TABLE trip_log
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+
+create 'trip_log_hbase', 'cf1'
+
+======================mysql jar setup====================
+1. First, log in into your EMR instance (using hadoop, then switch user to root using `sudo -i`) and complete the initial steps of setup. Now you
+need to run the following command to install the MySQL connector jar file.
+
+wget https://de-mysql-connector.s3.amazonaws.com/mysql-connector-java-8.0.25.tar.gz
+tar -xvf mysql-connector-java-8.0.25.tar.gz
+cd mysql-connector-java-8.0.25/
+sudo cp mysql-connector-java-8.0.25.jar /usr/lib/sqoop/lib/
+==================================================================
+sqoop import --connect jdbc:mysql://mydbinstance.cxueuenwsllg.us-east-1.rds.amazonaws.com/taxi_records --username admin --password 12345678 --table trip_log --hbase-table trip_log_hbase --column-family cf1 --hbase-create-table --hbase-row-key tpep_pickup_datetime,tpep_dropoff_datetime --hbase-bulkload --split-by payment_type -m 20
+==================================================================
+1. Happy base setup
+sudo -i
+sudo yum update
+Make sure the thrift server is running. :# jps
+sudo yum install python3-devel
+pip install happybase
+
+VendorID,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distance,RatecodeID,store_and_fwd_flag,PULocationID,DOLocationID,payment_type,fare_amount,extra,mta_tax,tip_amount,tolls_amount,improvement_surcharge,total_amount,congestion_surcharge,airport_fee
+
+
+```
+class AverageRevenueOverTime(MRJob):
+
+    def configure_args(self):
+        super(AverageRevenueOverTime, self).configure_args()
+        self.add_file_arg('--files', nargs='+', help='Input file paths')
+
+if __name__ == '__main__':
+    AverageRevenueOverTime.run()
+```
+
+to run above code: `python revenue_over_time.py --files input_file1.csv input_file2.csv`
