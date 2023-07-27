@@ -1,5 +1,5 @@
 # BigData-Ops-on-TLC-Yellow-Taxi  
-### Big Data Operations on NYC TLC yellow taxi data set for the year 2017 (5.17 GB)  
+### Conducted Big Data analytics New York City's Yellow taxi data set of the year 2017 (5.17 GB) with Big Data tools such as Hadoop, HBase, Sqoop, MapReduce, AWS EMR, AWS RDS (MySQL) 
 
 ![image](https://github.com/shinde-chandrakant/BigData-Ops-on-TLC-Yellow-Taxi/assets/94171996/0008f9fe-f364-4d5f-9e1f-c71ce5959497)
 
