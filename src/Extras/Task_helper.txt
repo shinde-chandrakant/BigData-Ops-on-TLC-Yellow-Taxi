@@ -9,6 +9,19 @@ pscp -P 22 -i "D:\Study\UPGRAD EPGDS\DE\AWS Academy\Demo1.ppk" Task_helper.txt h
 
 example 2:
 pscp -P 22 -i "D:\Study\UPGRAD EPGDS\DE\AWS Academy\Demo1.ppk" hadoop@ec2-3-81-233-13.compute-1.amazonaws.com:/home/hadoop/out.txt ./
+
+from git bash
+ssh -i <private id key> <username@ip>
+
+from powershell 
+ssh -i <private id key> <username@ip>
+
+NOTE: from powershell connection permission issue may occur as other group should not have any permission heres how you resove:
+
+icacls forPowershell.pem /remove "NT AUTHORITY\Authenticated Users"
+icacls forPowershell.pem /inheritance:r
+icacls forPowershell.pem /grant:r "$($env:USERNAME):(R)"
+
 ==================================================================
 
 CREATE TABLE trip_log 
